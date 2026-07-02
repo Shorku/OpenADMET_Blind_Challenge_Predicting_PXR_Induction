@@ -12,6 +12,7 @@ Date: Apr 2026 - Jul 2026
 
 - [Indexes](#indexes)
 - [Geometries](#geometries)
+- [Molecular properties](#molecular-properties)
 - [Methods](#methods)
 - [Data stats](#data-stats)
 
@@ -44,6 +45,35 @@ test set: `test_geoms.zip`
 Each `<structure_id>` folder contains geometries in `.xyz` XMOL format. 
 Each `<structure_id>.<conf_id>.xyz` file contains Cartesian coordinates for the `conf_id`-th 
 conformer of a molecule with internal id `structure_id`.
+
+
+### Molecular properties
+
+**Conformer-specific molecular properties**
+
+file: `train_conf_props.zip`
+
+`structure_id`: internal molecule id, a BLAKE2b hash of molecules canonical SMILES
+
+`conf_id`: conformer id
+
+`PTB_dipole_au`: molecular dipole from PTB calculation, a.u.
+
+`PTB_homo_lumo_eV`: HOMO-LUMO gap from PTB calculation, eV
+
+`xTB_E_Eh`: total energy from xTB caclulation, Eh
+
+`vol`: molecular volume
+
+`surf`: molecular surface
+
+`Rg`: gyration radius
+
+`Ellips1`:
+
+`Ellips2`:
+
+`Ellips3`:
 
 
 ### Methods
